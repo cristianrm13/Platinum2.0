@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu ul li a.active, .menu ul li a:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.badge {
+    background-color: #d9534f;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+.perf{
+    display: flex;
+    margin: 10px;
+}
+.mob{
+    width: 24px;
+    height: 24px;
+}
+.profile-info {
+    display: flex;
+    margin-left: 10px;
+}
+
+.profile-info img {
+    height: 40px;
+    border-radius: 10%;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status span {
+    margin-left: 10px;
+}
+
+.content {
+    border-radius: 10px;
+    
+
+}
+.clase{
+    display: flex;
+
+}
+
+.course {
+    background-color: #2b2b2b;
+    margin: 10px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    flex-basis: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.course h2 {
+    margin: 0 0 10px 0;
+}
+.actions{
+    display: flex;
+}
+.actions button {
+    display:flex;
+    justify-content: space-around;
+    background-color: #444444;
+    border: 1px white solid;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #45a049;
+}
+
+.calendar {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-basis: 30%;
+}
+
+.calendar-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.month button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.month span {
+    font-size: 20px;
+}
+
+.calendar-widget table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.calendar-widget th, .calendar-widget td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #444444;
+}
+
+.next-closure, .information {
+    margin-top: 20px;
+}
+
+.next-closure p, .information p {
+    margin: 5px 0;
+}

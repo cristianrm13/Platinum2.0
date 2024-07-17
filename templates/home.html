@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
     <link rel="stylesheet" href="/static/home.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
         <aside class="sidebar">
             <div class="logo">
                 <img src="/static/img/logo.png" alt="Logo">
-                <span>Software</span>
+                <h1><span>Software</span></h1>
             </div>
             <nav class="menu">
                 <ul>
@@ -45,6 +46,7 @@
                 <div class="status">
                     <span>Abierto</span>
                     <span>Sistema abierto</span>
+                    <button id="theme-toggle">Tema</button>
                 </div>
             </header>
             
@@ -54,9 +56,16 @@
                         <div class="course">
                             <h2>Programación Web</h2>
                             <p>Profesor: Alí Lopez</p>
-                            <p>Horario: Lunes: 8:00 - 10:00</p>
+                            <p>Horario:</p>
+                           <div class="hr-1">
+                            <div>
+                            <p> Lunes: 8:00 - 10:00</p>
                             <p>Miércoles: 8:00 - 10:00</p>
-                            <p>Grupo: A</p>
+                            </div>
+                            <div>
+                                <p>Grupo: A</p>
+                            </div>
+                           </div>
                             <div class="actions">
                                 <button>Exportar a Excel</button>
                                 <button>Exportar a PDF</button>
@@ -64,11 +73,18 @@
                             </div>
                         </div>
                         <div class="course">
-                            <h2>Programación Web</h2>
+                            <h2>Analisis Financiero de Software</h2>
                             <p>Profesor: Alí Lopez</p>
-                            <p>Horario: Lunes: 8:00 - 10:00</p>
-                            <p>Miércoles: 8:00 - 10:00</p>
-                            <p>Grupo: A</p>
+                            <p>Horario:</p>
+                            <div class="hr-1">
+                                <div>
+                                <p> Lunes: 8:00 - 10:00</p>
+                                <p>Miércoles: 8:00 - 10:00</p>
+                                </div>
+                                <div>
+                                    <p>Grupo: B</p>
+                                </div>
+                               </div>
                             <div class="actions">
                                 <button>Exportar a Excel</button>
                                 <button>Exportar a PDF</button>
@@ -77,11 +93,18 @@
                         </div>
 
                         <div class="course">
-                            <h2>Programación Web</h2>
+                            <h2>Inteligencia Artificial</h2>
                             <p>Profesor: Alí Lopez</p>
-                            <p>Horario: Lunes: 8:00 - 10:00</p>
-                            <p>Miércoles: 8:00 - 10:00</p>
-                            <p>Grupo: A</p>
+                            <p>Horario:</p>
+                            <div class="hr-1">
+                                <div>
+                                <p> Lunes: 8:00 - 10:00</p>
+                                <p>Miércoles: 8:00 - 10:00</p>
+                                </div>
+                                <div>
+                                    <p>Grupo: B</p>
+                                </div>
+                               </div>
                             <div class="actions">
                                 <button>Exportar a Excel</button>
                                 <button>Exportar a PDF</button>
@@ -91,49 +114,50 @@
                     </section>
                 </div>
 
-
                 <div>
                     <aside class="calendar">
                         <h2>Calendario de cierre</h2>
-                        <div class="calendar-widget">
-                            <div class="month">
-                                <button>&lt;</button>
-                                <span>Junio</span>
-                                <button>&gt;</button>
+                        <div id="calendar"></div>
+                        <div class="inf-m">
+                            <div class="next-closure">
+                                <h3>Próximo cierre</h3>
+                                <p>Corte 1</p>
+                                <div class="time-crt"><p>Quedan 7 días para el cierre</p></div>
+                                <p>Corte 2</p>
+                                <div class="time-crt"><p>Quedan 23 días para el cierre</p></div>
+                                <p>Corte 3</p>
+                                <div class="time-crt"><p>Quedan 36 días para el cierre</p></div>
                             </div>
-                            <table>
-                                <!-- Aquí van los días del calendario -->
-                                <tr>
-                                    <th>L</th>
-                                    <th>M</th>
-                                    <th>X</th>
-                                    <th>J</th>
-                                    <th>V</th>
-                                    <th>S</th>
-                                    <th>D</th>
-                                </tr>
-                                <!-- Aquí van las filas de los días -->
-                                <!-- ... -->
-                            </table>
-                        </div>
-                        <div class="next-closure">
-                            <h3>Próximo cierre</h3>
-                            <p>Corte 1</p>
-                            <p>Quedan 7 días para el cerrar</p>
-                            <p>Corte 2</p>
-                            <p>Quedan 23 días para el cerrar</p>
-                            <p>Corte 3</p>
-                            <p>Quedan 36 días para el cerrar</p>
-                        </div>
-                        <div class="information">
-                            <h3>Información</h3>
-                            <p>El sistema de gestión de materias está abierto actualmente. Los cierres de las materias se realizan de forma periódica, con alertas previas a los estudiantes.</p>
-                            <p>Asegúrate de revisar el calendario y estar al tanto de los próximos cierres para evitar retrasos en tus actividades académicas.</p>
+                            <div class="information">
+                                <h3>Información</h3>
+                                <p>El sistema de gestión de materias está abierto actualmente. Los cierres de las materias se realizan de forma periódica, con alertas previas a los estudiantes.</p>
+                                <p>Asegúrate de revisar el calendario y estar al tanto de los próximos cierres para evitar retrasos en tus actividades académicas.</p>
+                            </div>
                         </div>
                     </aside>
                 </div>
             </div>
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.11.3/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+
+            calendar.render();
+
+            // Toggle Theme
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-theme');
+            });
+        });
+    </script>
 </body>
 </html>

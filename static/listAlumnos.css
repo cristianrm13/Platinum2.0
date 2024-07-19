@@ -122,7 +122,7 @@ body {
 
 }
 
-.course {
+.course .table-container {
     background-color: #f1f1f1;
     margin: 10px;
     width: 400px;
@@ -188,7 +188,7 @@ body {
     font-size: 20px;
 }
 
-.calendar-widget table {
+.calendar-widget table .table-container {
     width: 100%;
     margin-top: 10px;
     border-collapse: collapse;
@@ -235,6 +235,82 @@ body {
     justify-content:space-around;
 }
 
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-button {
+    background-color: #333333;
+    border: 1px solid #555555;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-m {
+    padding: 20px;
+}
+
+.header-m {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-m h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.header-button:hover {
+    background-color: #555555;
+}
+
+.table-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.table-container h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead th {
+    background-color: #a1a1a16c;
+    padding: 10px;
+    text-align: start;
+    border-bottom: 2px solid #555555;
+}
+
+tbody td {
+    text-align:start;
+    padding: 15px 40px;
+    border-bottom: 1px solid #55555533;
+}
+
+.eval-button {
+    background-color: #333333;
+    border: 1px solid #555555;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.eval-button:hover {
+    background-color: #555555;
+}
 /* Dark Theme Styles */
 .dark-theme {
     background-color: #121212;
@@ -254,7 +330,7 @@ body {
     color: #121212;
 }
 
-.dark-theme .course {
+.dark-theme .course .container-m  {
     background-color: #333333;
     color: #ffffff;
 }
